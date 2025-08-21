@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://docbsyat562fn"]
-
-[ext_resource type="Texture2D" uid="uid://b0eavye5ptq3o" path="res://assets/fish_brown.svg" id="1_d56j8"]
-
-[node name="FishBrown" type="Sprite2D"]
-position = Vector2(143, 418)
-texture = ExtResource("1_d56j8")
