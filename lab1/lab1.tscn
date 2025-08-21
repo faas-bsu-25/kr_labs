@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=3 uid="uid://deagd6jgnhflw"]
+
+[ext_resource type="PackedScene" uid="uid://dpc4y5s1i8nja" path="res://lab1/obstacle.tscn" id="1_yaykk"]
+[ext_resource type="PackedScene" uid="uid://du28e4cvwtucm" path="res://lab1/player.tscn" id="2_hnwej"]
+[ext_resource type="Script" uid="uid://d1k6d2j72qn6r" path="res://lab1/goal.gd" id="3_0741t"]
+[ext_resource type="Texture2D" uid="uid://b26qrv70v1e6j" path="res://assets/background_rock_b.png" id="4_80wcw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_md2ku"]
+size = Vector2(53, 36)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ObstaclesNode" type="Node2D" parent="."]
+
+[node name="Obstacle" parent="ObstaclesNode" instance=ExtResource("1_yaykk")]
+position = Vector2(95, 93)
+
+[node name="Obstacle2" parent="ObstaclesNode" instance=ExtResource("1_yaykk")]
+position = Vector2(134, 147)
+
+[node name="Obstacle3" parent="ObstaclesNode" instance=ExtResource("1_yaykk")]
+position = Vector2(210, 70)
+
+[node name="Obstacle4" parent="ObstaclesNode" instance=ExtResource("1_yaykk")]
+position = Vector2(259, 215)
+
+[node name="Obstacle5" parent="ObstaclesNode" instance=ExtResource("1_yaykk")]
+position = Vector2(675, -54)
+gravity_scale = 1.0
+
+[node name="Obstacle13" parent="ObstaclesNode" instance=ExtResource("1_yaykk")]
+position = Vector2(292, -14)
+gravity_scale = 1.0
+
+[node name="Obstacle12" parent="ObstaclesNode" instance=ExtResource("1_yaykk")]
+position = Vector2(112, 26)
+gravity_scale = 1.0
+
+[node name="Obstacle11" parent="ObstaclesNode" instance=ExtResource("1_yaykk")]
+position = Vector2(708, -7)
+gravity_scale = 1.0
+
+[node name="Obstacle6" parent="ObstaclesNode" instance=ExtResource("1_yaykk")]
+position = Vector2(628, 46)
+
+[node name="Obstacle7" parent="ObstaclesNode" instance=ExtResource("1_yaykk")]
+position = Vector2(620, 92)
+
+[node name="Obstacle8" parent="ObstaclesNode" instance=ExtResource("1_yaykk")]
+position = Vector2(654, 133)
+
+[node name="Obstacle9" parent="ObstaclesNode" instance=ExtResource("1_yaykk")]
+position = Vector2(721, 136)
+
+[node name="Obstacle10" parent="ObstaclesNode" instance=ExtResource("1_yaykk")]
+position = Vector2(747, 46)
+
+[node name="Player" parent="." instance=ExtResource("2_hnwej")]
+position = Vector2(261, 160)
+
+[node name="Goal" type="Area2D" parent="."]
+script = ExtResource("3_0741t")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Goal"]
+position = Vector2(693, 82)
+shape = SubResource("RectangleShape2D_md2ku")
+
+[node name="Sprite" type="Sprite2D" parent="Goal"]
+position = Vector2(691, 66)
+texture = ExtResource("4_80wcw")
+
+[connection signal="body_entered" from="Goal" to="Player" method="Goal"]
+[connection signal="body_entered" from="Goal" to="Goal" method="_on_body_entered"]

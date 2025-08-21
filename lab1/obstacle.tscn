@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpc4y5s1i8nja"]
+
+[ext_resource type="Texture2D" uid="uid://bfodcax8ntsyk" path="res://assets/bubble_b.png" id="1_p6vu8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hnwej"]
+radius = 18.0
+
+[node name="Obstacle" type="RigidBody2D"]
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hnwej")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+rotation = 3.14159
+scale = Vector2(2.82233, 2.82233)
+texture = ExtResource("1_p6vu8")
