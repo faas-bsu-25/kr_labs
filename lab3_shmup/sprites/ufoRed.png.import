@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfodcax8ntsyk"
-path="res://.godot/imported/bubble_b.png-5f259814a223f755abcaabb5e5771c17.ctex"
+uid="uid://bn8xngm58dp7p"
+path="res://.godot/imported/ufoRed.png-6013623c85dc3affa1f3cf436eb9a83d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bubble_b.png"
-dest_files=["res://.godot/imported/bubble_b.png-5f259814a223f755abcaabb5e5771c17.ctex"]
+source_file="res://lab3_shmup/sprites/ufoRed.png"
+dest_files=["res://.godot/imported/ufoRed.png-6013623c85dc3affa1f3cf436eb9a83d.ctex"]
 
 [params]
 

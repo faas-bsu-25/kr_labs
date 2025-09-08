@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b26qrv70v1e6j"
-path="res://.godot/imported/background_rock_b.png-8ed545134a372349cf911193cf19484b.ctex"
+uid="uid://dai7s31qwyq6v"
+path="res://.godot/imported/purple.png-c9dc89ea25558585452f52b90857cd06.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background_rock_b.png"
-dest_files=["res://.godot/imported/background_rock_b.png-8ed545134a372349cf911193cf19484b.ctex"]
+source_file="res://lab3_shmup/sprites/purple.png"
+dest_files=["res://.godot/imported/purple.png-c9dc89ea25558585452f52b90857cd06.ctex"]
 
 [params]
 

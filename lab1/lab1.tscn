@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dpc4y5s1i8nja" path="res://lab1/obstacle.tscn" id="1_yaykk"]
 [ext_resource type="PackedScene" uid="uid://du28e4cvwtucm" path="res://lab1/player.tscn" id="2_hnwej"]
 [ext_resource type="Script" uid="uid://d1k6d2j72qn6r" path="res://lab1/goal.gd" id="3_0741t"]
-[ext_resource type="Texture2D" uid="uid://b26qrv70v1e6j" path="res://assets/background_rock_b.png" id="4_80wcw"]
+[ext_resource type="Texture2D" uid="uid://b26qrv70v1e6j" path="res://lab1/background_rock_b.png" id="4_80wcw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_md2ku"]
 size = Vector2(53, 36)

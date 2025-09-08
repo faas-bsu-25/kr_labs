@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://boqtr141l0p8c"]
+
+[ext_resource type="Texture2D" uid="uid://dai7s31qwyq6v" path="res://lab3_shmup/sprites/purple.png" id="1_slp00"]
+
+[node name="Background" type="Node2D"]
+metadata/_edit_lock_ = true
+
+[node name="Purple" type="Sprite2D" parent="."]
+scale = Vector2(4.5, 2.53125)
+texture = ExtResource("1_slp00")
+centered = false
+metadata/_edit_lock_ = true

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cshhc4h7hcryc"]
+
+[ext_resource type="Script" uid="uid://c3mnbnoxrdtqg" path="res://lab3_shmup/scripts/enemy.gd" id="1_7m8nn"]
+[ext_resource type="Texture2D" uid="uid://bmje6jb5e3pfy" path="res://lab3_shmup/sprites/enemyRed3.png" id="2_flarq"]
+
+[node name="Enemy" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_7m8nn")
+moveDir = Vector2(0, 85)
+metadata/_edit_group_ = true
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_flarq")
+
+[node name="Shape" type="CollisionPolygon2D" parent="."]
+scale = Vector2(2.43326, 2.43326)
+polygon = PackedVector2Array(-17, 18, -11, 18, -11, 12, -6, 11, -4, 15, 4, 15, 6, 11, 11, 12, 11, 18, 17, 18, 23, -1, 10, -16, 7, -16, 5, -18, -5, -18, -7, -16, -11, -16, -23, -1)

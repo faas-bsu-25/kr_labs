@@ -1,10 +1,10 @@
 [gd_scene load_steps=11 format=3 uid="uid://cht8fs3cfsea8"]
 
 [ext_resource type="Script" uid="uid://bsmoofeys0csn" path="res://lab2_pong/paddle.gd" id="1_hhevy"]
-[ext_resource type="Texture2D" uid="uid://d3qxxyj1flsdr" path="res://assets/paddle.png" id="1_hpkx2"]
+[ext_resource type="Texture2D" uid="uid://d3qxxyj1flsdr" path="res://lab2_pong/paddle.png" id="1_hpkx2"]
 [ext_resource type="Script" uid="uid://st7k8dnrld7o" path="res://lab2_pong/main.gd" id="1_jhfmr"]
 [ext_resource type="Script" uid="uid://c7l5141rog3l" path="res://lab2_pong/ball.gd" id="3_o5k6s"]
-[ext_resource type="Texture2D" uid="uid://cddok5cliktca" path="res://assets/ball.png" id="4_khvvx"]
+[ext_resource type="Texture2D" uid="uid://cddok5cliktca" path="res://lab2_pong/ball.png" id="4_khvvx"]
 [ext_resource type="Script" uid="uid://cgvw45qk3ltk8" path="res://lab2_pong/net.gd" id="5_khvvx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lxnki"]

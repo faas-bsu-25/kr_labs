@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://cfl2bmqqufv2v"]
+
+[ext_resource type="Script" uid="uid://cgrtgeav2t2w3" path="res://lab3_shmup/scripts/laser.gd" id="1_76cin"]
+[ext_resource type="PackedScene" uid="uid://blwla7ggk4yax" path="res://lab3_shmup/components/explosion.tscn" id="2_1wg1l"]
+[ext_resource type="Texture2D" uid="uid://f8tg50knmvj1" path="res://lab3_shmup/sprites/laserBlue14.png" id="2_ftxkh"]
+[ext_resource type="AudioStream" uid="uid://c4ltvjl1wgd1a" path="res://lab3_shmup/laserShoot.wav" id="3_1wg1l"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p3j3y"]
+radius = 6.0
+height = 56.0
+
+[node name="Laser" type="RigidBody2D"]
+collision_layer = 2
+collision_mask = 4
+gravity_scale = 0.0
+contact_monitor = true
+max_contacts_reported = 2
+script = ExtResource("1_76cin")
+explosion_scene = ExtResource("2_1wg1l")
+metadata/_edit_group_ = true
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_ftxkh")
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_p3j3y")
+
+[node name="LaserSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_1wg1l")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

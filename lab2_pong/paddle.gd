@@ -6,9 +6,8 @@ const FRICTION = 0.9
 func _process(delta: float) -> void:
 	self.velocity *= FRICTION
 	
-	if Input.is_action_pressed("left_player_up"):
-		self.velocity.y = -MOVE_SPEED
-	if Input.is_action_pressed("left_player_down"):
-		self.velocity.y = MOVE_SPEED
+	var direction = Input.get_axis("left_player_up", "left_player_down")
+	
+	self.velocity.y = MOVE_SPEED * direction
 	
 	move_and_slide()

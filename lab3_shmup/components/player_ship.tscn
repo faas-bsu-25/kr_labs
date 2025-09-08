@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bt0csul7jtfcr"]
+
+[ext_resource type="Script" uid="uid://dcx40t3753obs" path="res://lab3_shmup/scripts/player_ship.gd" id="1_a31cu"]
+[ext_resource type="Texture2D" uid="uid://2iqbqsqj6ghl" path="res://lab3_shmup/sprites/playerShip3_blue.png" id="1_q2qul"]
+
+[node name="PlayerShip" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_a31cu")
+metadata/_edit_group_ = true
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_q2qul")
+
+[node name="Shape" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(-4, -38, -11, -24, -49, 22, -49, 28, -23, 28, -14, 37, 0, 37, 14, 37, 22, 28, 49, 28, 49, 22, 10, -24, 5, -38)

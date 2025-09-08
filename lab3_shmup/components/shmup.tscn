@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://cw6x2aqh6dvee"]
+
+[ext_resource type="Script" uid="uid://l45qdjf86lk5" path="res://lab3_shmup/scripts/shmup.gd" id="1_nekw0"]
+[ext_resource type="PackedScene" uid="uid://boqtr141l0p8c" path="res://lab3_shmup/components/background.tscn" id="2_2u8cq"]
+[ext_resource type="PackedScene" uid="uid://bt0csul7jtfcr" path="res://lab3_shmup/components/player_ship.tscn" id="3_3hwfc"]
+[ext_resource type="PackedScene" uid="uid://cfl2bmqqufv2v" path="res://lab3_shmup/components/laser.tscn" id="4_7nbew"]
+[ext_resource type="Script" uid="uid://c65yco8lt4rf8" path="res://lab3_shmup/scripts/enemy_spawner.gd" id="5_mhvtg"]
+
+[node name="Shmup" type="Node2D" node_paths=PackedStringArray("txtScore")]
+script = ExtResource("1_nekw0")
+txtScore = NodePath("txtScore")
+
+[node name="Background" parent="." instance=ExtResource("2_2u8cq")]
+
+[node name="PlayerShip" parent="." instance=ExtResource("3_3hwfc")]
+position = Vector2(553, 569)
+laser_component = ExtResource("4_7nbew")
+
+[node name="EnemySpawner" type="Timer" parent="."]
+wait_time = 2.5
+autostart = true
+script = ExtResource("5_mhvtg")
+
+[node name="txtScore" type="Label" parent="."]
+offset_left = 1010.0
+offset_top = 19.0
+offset_right = 1050.0
+offset_bottom = 42.0
+scale = Vector2(3.05818, 3.05818)
+text = "0"
+
+[connection signal="timeout" from="EnemySpawner" to="EnemySpawner" method="_on_timeout"]
