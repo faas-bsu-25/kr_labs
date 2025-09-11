@@ -31,7 +31,10 @@ func card_clicked(card):
 	cards.append(card)
 	
 	if cards.size() > 1:
-		check_match()
+		$FlipCooldownTimer.start()
+		
+func _on_flip_cooldown_timer_timeout() -> void:
+	check_match()
 
 func check_match():
 	if cards[0].value == cards[1].value:
