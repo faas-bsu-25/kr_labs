@@ -11,7 +11,7 @@ func _on_body_entered(body: Node) -> void:
 	get_node("/root/Shmup").increment_score()
 	
 	var explosion: GPUParticles2D = explosion_scene.instantiate()
-	add_sibling(explosion)
+	get_node("/root/").add_child(explosion)
 	explosion.position = body.position
 	
 	body.queue_free()

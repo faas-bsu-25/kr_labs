@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dx5iej7gvunrq"]
+
+[ext_resource type="Script" uid="uid://2qbtkilcut27" path="res://lab6_platformer/scripts/player.gd" id="1_6luol"]
+[ext_resource type="Texture2D" uid="uid://dbg6xgms8sg2j" path="res://lab6_platformer/assets/character_0000.png" id="2_gn2g2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ckbuf"]
+height = 24.0
+
+[node name="Player" type="CharacterBody2D"]
+scale = Vector2(2.1, 2.1)
+script = ExtResource("1_6luol")
+metadata/_edit_group_ = true
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_gn2g2")
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_ckbuf")
