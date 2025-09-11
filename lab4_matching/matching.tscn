@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfjn0x6ifud4l"]
+
+[ext_resource type="Script" uid="uid://dpia63w3cd67f" path="res://lab4_matching/matching.gd" id="1_y4u03"]
+[ext_resource type="PackedScene" uid="uid://cnn0cxa6yd4o" path="res://lab4_matching/card.tscn" id="2_abaha"]
+
+[node name="Matching" type="Node2D"]
+script = ExtResource("1_y4u03")
+cardScene = ExtResource("2_abaha")

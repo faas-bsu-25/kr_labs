@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnn0cxa6yd4o"]
+
+[ext_resource type="Script" uid="uid://rxju62qo67gs" path="res://lab4_matching/card.gd" id="1_awndq"]
+[ext_resource type="Texture2D" uid="uid://baalok5siwrvk" path="res://lab4_matching/assets/cardBack_red5.png" id="2_xoe8f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fn08y"]
+size = Vector2(106, 144)
+
+[node name="Card" type="Area2D"]
+script = ExtResource("1_awndq")
+metadata/_edit_group_ = true
+
+[node name="Face" type="Sprite2D" parent="."]
+scale = Vector2(0.75, 0.75)
+
+[node name="Back" type="Sprite2D" parent="."]
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_xoe8f")
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_fn08y")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
