@@ -1,6 +1,8 @@
 extends Node2D
 
 @export var cardScene: PackedScene
+var allowingInput = true
+
 const SPACE_BETWEEN_CARDS = Vector2(115, 150)
 const PADDING_FROM_TOP_LEFT = Vector2(75, 100)
 
@@ -31,10 +33,12 @@ func card_clicked(card):
 	cards.append(card)
 	
 	if cards.size() > 1:
+		allowingInput = false
 		$FlipCooldownTimer.start()
 		
 func _on_flip_cooldown_timer_timeout() -> void:
 	check_match()
+	allowingInput = true
 
 func check_match():
 	if cards[0].value == cards[1].value:

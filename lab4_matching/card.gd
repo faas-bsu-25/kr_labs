@@ -19,7 +19,7 @@ func flip_back():
 	$"Back".show()
 
 func on_click():
-	if($"Back".visible):
+	if($"Back".visible) and $"/root/Matching".allowingInput:
 		$"Back".hide()
 		$"/root/Matching".card_clicked(self)
 

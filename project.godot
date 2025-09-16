@@ -15,6 +15,10 @@ run/main_scene="uid://dfjn0x6ifud4l"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=600
+
 [input]
 
 pong_left-player-up={
