@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://byygpfc6fmgr5"]
+[gd_resource type="TileSet" load_steps=6 format=3 uid="uid://byygpfc6fmgr5"]
 
 [ext_resource type="Texture2D" uid="uid://dixs4hk3bvmdy" path="res://lab6_platformer/assets/tiles/tilemap.png" id="1_ge3aa"]
 
@@ -7,6 +7,9 @@ tile_data = PackedInt32Array(0, 65536, 0, 1, 131072, 0, 2, 196608, 0)
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_t1mra"]
 tile_data = PackedInt32Array(0, 851968, 0, 65536, 851968, 1, 131072, 851968, 2, 1, 917504, 0, 65537, 917504, 1, 131073, 851968, 4, 2, 983040, 0, 65538, 983040, 1, 131074, 983040, 2)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_ge3aa"]
+tile_data = PackedInt32Array(0, 262144, 3, 65536, 262144, 5, 131072, 262144, 6, 1, 327680, 4, 65537, 327680, 5, 131073, 327680, 6, 2, 393216, 4, 65538, 393216, 5, 131074, 393216, 6, 3, 327680, 3, 65539, 458752, 5, 131075, 458752, 6)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s3sgh"]
 texture = ExtResource("1_ge3aa")
@@ -31,7 +34,7 @@ texture_region_size = Vector2i(18, 18)
 8:0/0 = 0
 8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 9:0/0 = 0
-9:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+9:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -2.51802, 9, -2.51802, 9, 9, -9, 9)
 10:0/0 = 0
 10:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 11:0/0 = 0
@@ -60,10 +63,8 @@ texture_region_size = Vector2i(18, 18)
 6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 7:1/0 = 0
 7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
-8:1/0 = 0
-8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 9:1/0 = 0
-9:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+9:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 2.69788, -6.29505, 6.65477, -1.79859, 9, 9, -9, 9)
 10:1/0 = 0
 10:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 11:1/0 = 0
@@ -117,9 +118,7 @@ texture_region_size = Vector2i(18, 18)
 3:3/0 = 0
 3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 4:3/0 = 0
-4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
-5:3/0 = 0
-5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(9, -9, 9, 9, -9, 9, -6.29506, 5.03605, -6.1152, -5.2159, 4.85619, -5.03604)
 6:3/0 = 0
 6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 7:3/0 = 0
@@ -189,7 +188,7 @@ texture_region_size = Vector2i(18, 18)
 7:5/0 = 0
 7:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 8:5/0 = 0
-8:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+8:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6, 2, -2, 2, 0, 0, 6, 0, 6, 6.5, 4.5, 7, 4, 9, -3.59717, 9, -6, 7)
 9:5/0 = 0
 9:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 10:5/0 = 0
@@ -236,6 +235,10 @@ texture_region_size = Vector2i(18, 18)
 14:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 15:6/0 = 0
 15:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
+8:1/0 = 0
+8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(9, -9, 9, 9, -9, 9, -7.19435, -3.23746, -2.33816, -7.01449)
+5:3/0 = 0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, -4.85619, -4.85619, 5.39576, -5.03604, 5.39576, 4.67633, 9, 9, -9, 9)
 
 [resource]
 tile_size = Vector2i(18, 18)
@@ -244,3 +247,4 @@ physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_s3sgh")
 pattern_0 = SubResource("TileMapPattern_o0ft1")
 pattern_1 = SubResource("TileMapPattern_t1mra")
+pattern_2 = SubResource("TileMapPattern_ge3aa")

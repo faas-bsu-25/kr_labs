@@ -21,6 +21,10 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("platformer_jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 	
+	# Reset
+	if Input.is_action_just_pressed("platformer_reset"):
+		self.position = Vector2(respawn_position.x, 0)
+	
 	# Velocity/direction
 	direction = Input.get_axis("platformer_left", "platformer_right")
 	velocity.x = direction * SPEED if direction else move_toward(velocity.x, 0, SPEED)
