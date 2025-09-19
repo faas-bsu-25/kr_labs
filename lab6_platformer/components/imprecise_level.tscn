@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://cmcke4lsrqhl1"]
+
+[ext_resource type="Script" uid="uid://8h5rwgwcustb" path="res://lab6_platformer/scripts/imprecise_level.gd" id="1_5nxtm"]
+[ext_resource type="PackedScene" uid="uid://ccqo1oes6dusr" path="res://lab6_platformer/components/tile_map.tscn" id="2_5nxtm"]
+[ext_resource type="PackedScene" uid="uid://dsmh8nxn8kdt1" path="res://lab6_platformer/components/player.tscn" id="3_cwx22"]
+[ext_resource type="PackedScene" uid="uid://bihqn5jbgirl5" path="res://lab6_platformer/components/coin.tscn" id="4_oyus3"]
+[ext_resource type="PackedScene" uid="uid://fsamhbxby7f" path="res://lab6_platformer/components/gui.tscn" id="5_5nxtm"]
+
+[node name="ImpreciseLevel" type="Node2D" node_paths=PackedStringArray("scoreLabel")]
+texture_filter = 1
+script = ExtResource("1_5nxtm")
+scoreLabel = NodePath("Canvas/GUI/ScoreLabel")
+
+[node name="TileMap" parent="." instance=ExtResource("2_5nxtm")]
+
+[node name="Player" parent="." instance=ExtResource("3_cwx22")]
+position = Vector2(134, 324)
+respawn_position = Vector2(134, -100)
+
+[node name="Coins" type="Node2D" parent="."]
+
+[node name="Coin" parent="Coins" instance=ExtResource("4_oyus3")]
+position = Vector2(271, 248)
+
+[node name="Coin2" parent="Coins" instance=ExtResource("4_oyus3")]
+position = Vector2(489, 356)
+
+[node name="Coin5" parent="Coins" instance=ExtResource("4_oyus3")]
+position = Vector2(710, 534)
+
+[node name="Coin3" parent="Coins" instance=ExtResource("4_oyus3")]
+position = Vector2(837, 237)
+
+[node name="Coin4" parent="Coins" instance=ExtResource("4_oyus3")]
+position = Vector2(960, 247)
+
+[node name="Canvas" parent="." instance=ExtResource("5_5nxtm")]
+
+[node name="GUI" parent="Canvas" index="0"]
+metadata/_edit_use_anchors_ = true
+
+[node name="ScoreLabel" parent="Canvas/GUI" index="0"]
+metadata/_edit_use_anchors_ = true
+
+[editable path="TileMap"]
+[editable path="Canvas"]

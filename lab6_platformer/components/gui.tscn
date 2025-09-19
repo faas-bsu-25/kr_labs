@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://fsamhbxby7f"]
+
+[ext_resource type="FontFile" uid="uid://b527g4j2t7e7n" path="res://lab6_platformer/assets/ARCADECLASSIC.TTF" id="1_80edf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_50ynb"]
+font = ExtResource("1_80edf")
+font_size = 32
+
+[node name="Canvas" type="CanvasLayer"]
+follow_viewport_enabled = true
+
+[node name="GUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 576.0
+offset_right = -576.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScoreLabel" type="Label" parent="GUI"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -576.0
+offset_right = 576.0
+offset_bottom = 44.0
+text = "Coins - 0"
+label_settings = SubResource("LabelSettings_50ynb")
+horizontal_alignment = 1
+vertical_alignment = 1
