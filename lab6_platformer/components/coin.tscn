@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bihqn5jbgirl5"]
 
-[ext_resource type="Texture2D" uid="uid://cvcfycy11o04a" path="res://lab6_platformer/assets/coin.png" id="1_6iesm"]
+[ext_resource type="Texture2D" uid="uid://cvcfycy11o04a" path="res://lab6_platformer/assets/sprites/coin.png" id="1_6iesm"]
 [ext_resource type="Script" uid="uid://d4eggxjpeje0o" path="res://lab6_platformer/scripts/coin.gd" id="1_neycy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6iesm"]

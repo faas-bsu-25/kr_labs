@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b21w7ve5dou45"
-path="res://.godot/imported/tile_hole_left.png-36ed4f12aa994e03896b3cfe42cc8fca.ctex"
+uid="uid://chfsnjgvve274"
+path="res://.godot/imported/tilemap-backgrounds.png-c4e5e7baa1e8bbb90e4426b4e38b01e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://lab6_platformer/assets/tile_hole_left.png"
-dest_files=["res://.godot/imported/tile_hole_left.png-36ed4f12aa994e03896b3cfe42cc8fca.ctex"]
+source_file="res://lab6_platformer/assets/tiles/tilemap-backgrounds.png"
+dest_files=["res://.godot/imported/tilemap-backgrounds.png-c4e5e7baa1e8bbb90e4426b4e38b01e6.ctex"]
 
 [params]
 

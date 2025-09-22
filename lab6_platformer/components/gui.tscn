@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://fsamhbxby7f"]
 
-[ext_resource type="FontFile" uid="uid://b527g4j2t7e7n" path="res://lab6_platformer/assets/ARCADECLASSIC.TTF" id="1_80edf"]
-[ext_resource type="FontFile" uid="uid://c74qvb5m4pfmf" path="res://lab6_platformer/assets/712_serif.ttf" id="2_agwg8"]
+[ext_resource type="FontFile" uid="uid://b527g4j2t7e7n" path="res://lab6_platformer/assets/fonts/ARCADECLASSIC.TTF" id="1_80edf"]
+[ext_resource type="FontFile" uid="uid://c74qvb5m4pfmf" path="res://lab6_platformer/assets/fonts/712_serif.ttf" id="2_agwg8"]
 [ext_resource type="Script" uid="uid://dxx66ienl1hc5" path="res://lab6_platformer/scripts/controls_label.gd" id="3_onqdi"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_50ynb"]

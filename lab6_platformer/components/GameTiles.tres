@@ -1,8 +1,8 @@
 [gd_resource type="TileSet" load_steps=10 format=3 uid="uid://byygpfc6fmgr5"]
 
-[ext_resource type="Texture2D" uid="uid://dixs4hk3bvmdy" path="res://lab6_platformer/assets/tilemap.png" id="1_j083g"]
-[ext_resource type="Texture2D" uid="uid://coqv11ara00u7" path="res://lab6_platformer/assets/tile_hole.png" id="2_tvu7w"]
-[ext_resource type="Texture2D" uid="uid://b21w7ve5dou45" path="res://lab6_platformer/assets/tile_hole_left.png" id="3_q64p1"]
+[ext_resource type="Texture2D" uid="uid://dixs4hk3bvmdy" path="res://lab6_platformer/assets/tiles/tilemap.png" id="1_ge3aa"]
+[ext_resource type="Texture2D" uid="uid://coqv11ara00u7" path="res://lab6_platformer/assets/tiles/tile_hole.png" id="2_j083g"]
+[ext_resource type="Texture2D" uid="uid://b21w7ve5dou45" path="res://lab6_platformer/assets/tiles/tile_hole_left.png" id="3_tvu7w"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_o0ft1"]
 tile_data = PackedInt32Array(0, 65536, 0, 1, 131072, 0, 2, 196608, 0)
@@ -14,7 +14,7 @@ tile_data = PackedInt32Array(0, 851968, 0, 65536, 851968, 1, 131072, 851968, 2, 
 tile_data = PackedInt32Array(0, 262144, 3, 65536, 262144, 5, 131072, 262144, 6, 1, 327680, 4, 65537, 327680, 5, 131073, 327680, 6, 2, 393216, 4, 65538, 393216, 5, 131074, 393216, 6, 3, 327680, 3, 65539, 458752, 5, 131075, 458752, 6)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s3sgh"]
-texture = ExtResource("1_j083g")
+texture = ExtResource("1_ge3aa")
 separation = Vector2i(1, 1)
 texture_region_size = Vector2i(18, 18)
 0:0/0 = 0
@@ -243,13 +243,13 @@ texture_region_size = Vector2i(18, 18)
 5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, -4.85619, -4.85619, 5.39576, -5.03604, 5.39576, 4.67633, 9, 9, -9, 9)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q64p1"]
-texture = ExtResource("2_tvu7w")
+texture = ExtResource("2_j083g")
 texture_region_size = Vector2i(18, 18)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u1rpg"]
-texture = ExtResource("3_q64p1")
+texture = ExtResource("3_tvu7w")
 texture_region_size = Vector2i(18, 18)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7, -9, 9, -9, 9, 9, -7, 9)

@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://fsamhbxby7f" path="res://lab6_platformer/components/gui.tscn" id="3_ynq17"]
 [ext_resource type="PackedScene" uid="uid://bihqn5jbgirl5" path="res://lab6_platformer/components/coin.tscn" id="4_ynq17"]
 [ext_resource type="TileSet" uid="uid://byygpfc6fmgr5" path="res://lab6_platformer/components/GameTiles.tres" id="6_1inym"]
-[ext_resource type="FontFile" uid="uid://b527g4j2t7e7n" path="res://lab6_platformer/assets/ARCADECLASSIC.TTF" id="7_h74bh"]
+[ext_resource type="FontFile" uid="uid://b527g4j2t7e7n" path="res://lab6_platformer/assets/fonts/ARCADECLASSIC.TTF" id="7_h74bh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_q703x"]
 font = ExtResource("7_h74bh")

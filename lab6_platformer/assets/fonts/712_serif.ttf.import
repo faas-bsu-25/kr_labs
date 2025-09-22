@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://b527g4j2t7e7n"
-path="res://.godot/imported/ARCADECLASSIC.TTF-3772ecba93c76ce69346fa743c635fa0.fontdata"
+uid="uid://c74qvb5m4pfmf"
+path="res://.godot/imported/712_serif.ttf-243dd982812169d5a8eee35727d89c90.fontdata"
 
 [deps]
 
-source_file="res://lab6_platformer/assets/ARCADECLASSIC.TTF"
-dest_files=["res://.godot/imported/ARCADECLASSIC.TTF-3772ecba93c76ce69346fa743c635fa0.fontdata"]
+source_file="res://lab6_platformer/assets/fonts/712_serif.ttf"
+dest_files=["res://.godot/imported/712_serif.ttf-243dd982812169d5a8eee35727d89c90.fontdata"]
 
 [params]
 
