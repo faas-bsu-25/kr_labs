@@ -7,6 +7,9 @@ const JUMP_VELOCITY: float = -400.0
 
 var direction: int = 0
 
+func _ready() -> void:
+	$Sprite.play("default")
+
 func _process(delta: float) -> void:
 	match direction:
 		-1: $Sprite.flip_h = false;
