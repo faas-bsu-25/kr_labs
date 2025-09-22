@@ -6,14 +6,22 @@ const SPEED: float = 300.0
 const JUMP_VELOCITY: float = -400.0
 
 var direction: int = 0
+var was_on_floor: bool = true
 
 func _ready() -> void:
 	$Sprite.play("default")
 
 func _process(delta: float) -> void:
+	# Look in movement direction
 	match direction:
 		-1: $Sprite.flip_h = false;
 		1: $Sprite.flip_h = true;
+	
+	# Play landing sound when landing
+	if self.is_on_floor() and !was_on_floor:
+		$Sounds/Land.play()
+	
+	was_on_floor = is_on_floor()
 
 func _physics_process(delta: float) -> void:
 	# Gravity
@@ -23,6 +31,7 @@ func _physics_process(delta: float) -> void:
 	# Jump
 	if Input.is_action_just_pressed("platformer_jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		$Sounds/Jump.play()
 	
 	# Reset
 	if Input.is_action_just_pressed("platformer_reset"):
@@ -37,8 +46,8 @@ func _physics_process(delta: float) -> void:
 
 
 func on_screen_exited() -> void:
-	if ($RespawnTimer.is_stopped() or $RespawnTimer.paused):
-		$RespawnTimer.start();
+	if ($RespawnNotifier/Timer.is_stopped() or $RespawnNotifier/Timer.paused):
+		$RespawnNotifier/Timer.start();
 
 func _on_respawn_timer_timeout() -> void:
 	self.position = respawn_position
