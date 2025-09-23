@@ -34,8 +34,8 @@ func _physics_process(delta: float) -> void:
 		$Sounds/Jump.play()
 	
 	# Reset
-	if Input.is_action_just_pressed("platformer_reset"):
-		self.position = Vector2(respawn_position.x, 0)
+	if Input.is_action_just_pressed("platformer_reset") and (0 < self.position.x and self.position.x < 1152) and (0 < self.position.y and self.position.y < 648):
+		self.position = Vector2(respawn_position.x, 20)
 	
 	# Velocity/direction
 	direction = Input.get_axis("platformer_left", "platformer_right")
