@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://ci2lmgxuxf12p"]
+
+[ext_resource type="Script" uid="uid://knhqsjmu3qpb" path="res://lab5_infinite/scripts/object_scroll.gd" id="1_8ysq1"]
+[ext_resource type="Texture2D" uid="uid://ck5sqe0faxaxa" path="res://lab5_infinite/assets/sprites/platforms.png" id="2_i0cj0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0jtg2"]
+size = Vector2(166, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3isb"]
+atlas = ExtResource("2_i0cj0")
+region = Rect2(15.8381, 0, 32.4424, 9.51087)
+
+[node name="Ground" type="StaticBody2D"]
+script = ExtResource("1_8ysq1")
+metadata/_edit_group_ = true
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_0jtg2")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(5.18979, 5.18979)
+texture = SubResource("AtlasTexture_p3isb")

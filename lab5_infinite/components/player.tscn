@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2iebj0ctsfqp"]
+
+[ext_resource type="Script" uid="uid://drowxbcfxbs47" path="res://lab5_infinite/scripts/player.gd" id="1_aieom"]
+[ext_resource type="SpriteFrames" uid="uid://cgmde7fg3a8up" path="res://lab5_infinite/components/PlayerFrames.tres" id="2_bkii5"]
+[ext_resource type="AudioStream" uid="uid://byfehiklb7bx1" path="res://lab5_infinite/assets/sounds/hurt.wav" id="3_l05yk"]
+[ext_resource type="AudioStream" uid="uid://dgschf7aebgq1" path="res://lab5_infinite/assets/sounds/jump.wav" id="4_daipj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g2v7s"]
+radius = 28.0
+height = 104.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_aieom")
+metadata/_edit_group_ = true
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_g2v7s")
+
+[node name="AnimSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(-15, -46)
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("2_bkii5")
+animation = &"jump"
+autoplay = "run"
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="Hurt" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("3_l05yk")
+volume_db = -12.0
+
+[node name="Jump" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("4_daipj")
+volume_db = -12.0
+
+[connection signal="animation_finished" from="AnimSprite" to="." method="_on_anim_sprite_animation_finished"]

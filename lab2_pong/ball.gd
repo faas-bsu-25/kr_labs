@@ -11,6 +11,7 @@ func _ready() -> void:
 	self.velocity.y = Y_SPEED if goDown else -Y_SPEED
 
 func _process(delta: float) -> void:
+	print(self.velocity)
 	var collision = move_and_collide(self.velocity)
 	
 	if collision:
