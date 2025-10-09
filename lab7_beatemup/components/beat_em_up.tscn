@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bgkf0htbg1uf" path="res://lab7_beatemup/scripts/player.gd" id="1_p864f"]
 [ext_resource type="Texture2D" uid="uid://jbiibtfi2cl5" path="res://lab7_beatemup/assets/adventurer-1.3-Sheet.png" id="2_p864f"]
-[ext_resource type="Script" uid="uid://rg27dpmwtd51" path="res://lab7_beatemup/components/dummy.gd" id="3_btdi8"]
+[ext_resource type="Script" uid="uid://rg27dpmwtd51" path="res://lab7_beatemup/scripts/dummy.gd" id="3_btdi8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t3r63"]
 radius = 30.0
