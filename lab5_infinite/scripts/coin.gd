@@ -1,4 +1,4 @@
-extends "res://lab5_infinite/scripts/object_scroll.gd"
+class_name Coin extends ScrollingObject
 
 func _on_body_entered(body: Node2D) -> void:
 	print("ow")

@@ -1,4 +1,4 @@
-extends CollisionObject2D
+class_name ScrollingObject extends CollisionObject2D
 
 @export var move_speed = 175
 

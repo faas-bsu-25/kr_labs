@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="kr_labs"
-run/main_scene="uid://4j51ota6k0m3"
-config/features=PackedStringArray("4.4", "Forward Plus")
+run/main_scene="uid://bpg3epcjqooxw"
+config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [input]
