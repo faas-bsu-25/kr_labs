@@ -1,0 +1,149 @@
+[gd_scene load_steps=16 format=3 uid="uid://rvddfblrphto"]
+
+[ext_resource type="Script" uid="uid://bsfby3pdlg2di" path="res://lab8_monkeyball/ground_movement.gd" id="1_8lqah"]
+[ext_resource type="PackedScene" uid="uid://cun3a0hhf7jd1" path="res://lab8_monkeyball/ground.tscn" id="2_2ldm0"]
+[ext_resource type="Script" uid="uid://polm2mwklyuv" path="res://lab8_monkeyball/camera_follow.gd" id="3_vbk86"]
+[ext_resource type="Script" uid="uid://bsgcdwh1dgs2p" path="res://lab8_monkeyball/coin.gd" id="4_06ca2"]
+[ext_resource type="PackedScene" uid="uid://esir0x4oofwj" path="res://lab8_monkeyball/coin-gold.glb" id="4_uccsa"]
+[ext_resource type="PackedScene" uid="uid://prh35jb6tjtd" path="res://lab8_monkeyball/sophia/sophia_skin.tscn" id="6_2ldm0"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8lqah"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_ej65w"]
+sky_material = SubResource("ProceduralSkyMaterial_8lqah")
+
+[sub_resource type="Environment" id="Environment_vbk86"]
+background_mode = 2
+sky = SubResource("Sky_ej65w")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r42o7"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_tch6b"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_uccsa"]
+height = 0.2
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ej65w"]
+radius = 0.75
+
+[sub_resource type="SphereMesh" id="SphereMesh_vbk86"]
+radius = 0.75
+height = 1.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_06ca2"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.09803922)
+
+[node name="MonkeyBall" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_vbk86")
+
+[node name="GroundHolder" type="Node3D" parent="."]
+script = ExtResource("1_8lqah")
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Ground" parent="GroundHolder" instance=ExtResource("2_2ldm0")]
+
+[node name="Ground4" parent="GroundHolder" instance=ExtResource("2_2ldm0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="Ground5" parent="GroundHolder" instance=ExtResource("2_2ldm0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8)
+
+[node name="Ground6" parent="GroundHolder" instance=ExtResource("2_2ldm0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="Obstacle" parent="GroundHolder" instance=ExtResource("2_2ldm0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1000001, 1, -1.6000001)
+
+[node name="Shape" parent="GroundHolder/Obstacle" index="0"]
+shape = SubResource("BoxShape3D_r42o7")
+
+[node name="Mash" parent="GroundHolder/Obstacle" index="1"]
+mesh = SubResource("BoxMesh_tch6b")
+
+[node name="Obstacle2" parent="GroundHolder" instance=ExtResource("2_2ldm0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8999999, 1, 0.89999986)
+
+[node name="Shape" parent="GroundHolder/Obstacle2" index="0"]
+shape = SubResource("BoxShape3D_r42o7")
+
+[node name="Mash" parent="GroundHolder/Obstacle2" index="1"]
+mesh = SubResource("BoxMesh_tch6b")
+
+[node name="Coins" type="Node3D" parent="GroundHolder"]
+metadata/_edit_lock_ = true
+
+[node name="Coin" type="Area3D" parent="GroundHolder/Coins"]
+transform = Transform3D(-0.9961381, 0, 0.08504602, 0, 1, 0, -0.08504602, 0, -0.9961381, 2, 1.2999998, 0.8)
+script = ExtResource("4_06ca2")
+metadata/_edit_group_ = true
+
+[node name="coin-gold2" parent="GroundHolder/Coins/Coin" instance=ExtResource("4_uccsa")]
+transform = Transform3D(-1.999754, 0, -0.03164041, 0, 2, 0, 0.03164041, 0, -1.999754, 0, -0.39999998, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GroundHolder/Coins/Coin"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+shape = SubResource("CylinderShape3D_uccsa")
+
+[node name="Coin2" type="Area3D" parent="GroundHolder/Coins"]
+transform = Transform3D(0.52007246, 0, 0.8538449, 0, 1, 0, -0.8538449, 0, 0.52007246, 0, 1.2999998, -0.90000004)
+script = ExtResource("4_06ca2")
+metadata/_edit_group_ = true
+
+[node name="coin-gold2" parent="GroundHolder/Coins/Coin2" instance=ExtResource("4_uccsa")]
+transform = Transform3D(-1.999754, 0, -0.03164041, 0, 2, 0, 0.03164041, 0, -1.999754, 0, -0.39999998, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GroundHolder/Coins/Coin2"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+shape = SubResource("CylinderShape3D_uccsa")
+
+[node name="Coin3" type="Area3D" parent="GroundHolder/Coins"]
+transform = Transform3D(0.53554994, 0, -0.844219, 0, 1, 0, 0.844219, 0, 0.53554994, -4, 1.2999998, 0.099999964)
+script = ExtResource("4_06ca2")
+metadata/_edit_group_ = true
+
+[node name="coin-gold2" parent="GroundHolder/Coins/Coin3" instance=ExtResource("4_uccsa")]
+transform = Transform3D(-1.999754, 0, -0.03164041, 0, 2, 0, 0.03164041, 0, -1.999754, 0, -0.39999998, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GroundHolder/Coins/Coin3"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+shape = SubResource("CylinderShape3D_uccsa")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0.86602545, -0.49999997, 0, 0.49999997, 0.86602545, 1, 3.7855173e-08, -2.1855692e-08, 0, 20, 0)
+
+[node name="Ball" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3, 1.4, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Ball"]
+shape = SubResource("SphereShape3D_ej65w")
+
+[node name="Mesh" type="MeshInstance3D" parent="Ball"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.100000024, 0)
+mesh = SubResource("SphereMesh_vbk86")
+surface_material_override/0 = SubResource("StandardMaterial3D_06ca2")
+
+[node name="Camera3D" type="Camera3D" parent="Ball" node_paths=PackedStringArray("target")]
+transform = Transform3D(-4.371139e-08, -0.5, 0.8660254, 0, 0.8660254, 0.5, -1, 2.1855694e-08, -3.7855173e-08, 8.3, 3, -1)
+top_level = true
+script = ExtResource("3_vbk86")
+target = NodePath("..")
+offset = Vector3(3, 1.6, 0)
+
+[node name="SophiaSkin" parent="Ball" instance=ExtResource("6_2ldm0")]
+transform = Transform3D(0.66, 0, 0, 0, 0.66, 0, 0, 0, 0.66, 0.0367589, -0.7722354, -0.03944981)
+script = null
+
+[connection signal="body_entered" from="GroundHolder/Coins/Coin" to="GroundHolder/Coins/Coin" method="_on_body_entered"]
+[connection signal="body_entered" from="GroundHolder/Coins/Coin2" to="GroundHolder/Coins/Coin2" method="_on_body_entered"]
+[connection signal="body_entered" from="GroundHolder/Coins/Coin3" to="GroundHolder/Coins/Coin3" method="_on_body_entered"]
+
+[editable path="GroundHolder/Obstacle"]
+[editable path="GroundHolder/Obstacle2"]
