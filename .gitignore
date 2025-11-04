@@ -1,5 +1,6 @@
 # Godot 4+ specific ignores
-.godot/
 /android/
-lab6_platformer/assets/kenney_pixel-platformer-farm-expansion.zip
-lab6_platformer/assets/kenney_pixel-platformer.zip
+
+# Custom
+.godot/
+*.zip
