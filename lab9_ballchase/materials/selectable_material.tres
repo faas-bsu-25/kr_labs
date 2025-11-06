@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://da55nt6n6yere"]
+
+[ext_resource type="Material" uid="uid://dsiodwrtmwm4k" path="res://lab9_ballchase/materials/outline_material.tres" id="1_50hmg"]
+
+[resource]
+next_pass = ExtResource("1_50hmg")
